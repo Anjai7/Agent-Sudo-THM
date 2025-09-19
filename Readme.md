@@ -14,14 +14,14 @@ PORT   STATE SERVICE
 Nmap done: 1 IP address (1 host up) scanned in 4.24 seconds
 ```
 lets visit the website 
-![[Pasted image 20250916102500.png]]
+![image](Pasted%20image%2020250916102500.png)
 this is a hint to use the codename as user-agent ,since it is from R we can assume that each use a letter as codename lets try to chnage the letters when i tried A and B nothing happened but when i tried C it got redirected 
 to do this i used burpsuite 
-![[Pasted image 20250916102752.png]]
+![image](Pasted%20image%2020250916102752.png)
 in burpsuite proxy turn on intercept and visit webpage 
-![[Pasted image 20250916102922.png]]
+![image](Pasted%20image%2020250916102922.png)
 here change the user-agent to C and forward you can then turn off intercept going to browser you will be in a different web page 
-![[Pasted image 20250916103151.png]]
+![image](Pasted%20image%2020250916103151.png)
 so from this the agent with codename C is chris and his password is weak
 lets brute force it since in tryhackme asks for ftp password lets do ftp brute force using hydra
 ```
@@ -101,9 +101,9 @@ Agent C
 ```
 hmm the password is stored in the pictures stenography or something...
 cute-alien.png
-![[Pasted image 20250916105533.png]]
+![image](Pasted%20image%2020250916105533.png)
 cutie.png
-![[Pasted image 20250916105727.png]]
+![image](Pasted%20image%2020250916105727.png)
 in tryhack it asks for zip password so there is a zip file hidden some where 
 i suspect the images might hide them 
 lets use binwalk to extract it 
@@ -147,7 +147,7 @@ Session completed.
 ```
 lets see what is inside the zip 
 after extracting with password we found a txt file named 
-![[Pasted image 20250916111312.png]]
+![image](Pasted%20image%2020250916111312.png)
 what is this "QXJlYTUx"?
 since tryhackme ask for steg password lets run stegcracker on cute_alien.png
 ```
